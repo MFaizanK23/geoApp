@@ -98,7 +98,7 @@ public class GeoDatabase extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         int deletedRows = db.delete(DATABASE_TABLE, ID + "=?",
                 new String[]{String.valueOf(coord.getID())});
-        Log.d("NoteDatabase", "Attempting to delete note with ID: " + coord.getID() + ". Rows deleted: " + deletedRows);
+        Log.d("NoteDatabase", "Deleting Coordinate with id of : " + coord.getID() + ". Rows deleted: " + deletedRows);
         db.close();
     }
 

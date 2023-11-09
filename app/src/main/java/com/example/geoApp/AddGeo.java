@@ -83,17 +83,13 @@ public class AddGeo extends AppCompatActivity {
 
     private void deleteExistingNote() {
         if (changer != null) {
-            // Delete the existing note from the database
             GeoDatabase db = new GeoDatabase(this);
             db.deleteCoord(changer);
 
-            // Indicate that you've left edit mode
             isEditMode = false;
 
-            // Notify the user that the note has been deleted
             Toast.makeText(this, "Note Has Been Deleted.", Toast.LENGTH_SHORT).show();
 
-            // Return to the main activity
             rmain();
         }
     }

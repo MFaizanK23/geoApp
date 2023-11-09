@@ -151,13 +151,11 @@ public class MainActivity extends AppCompatActivity implements Adapter.OnNoteDel
 
     @Override
     public void onNoteDelete(Coord coord) {
-        // Callback method to handle note deletion
 
-        GeoDatabase db = new GeoDatabase(this); // Database instance
-        db.deleteCoord(coord); // Delete the note from the database
-
-        coordinates = db.getAddresses(); // Refresh the list after deletion
-        adapter.updateN(coordinates); // Notify the adapter to refresh the RecyclerView
+        GeoDatabase db = new GeoDatabase(this);
+        db.deleteCoord(coord);
+        coordinates = db.getAddresses();
+        adapter.updateN(coordinates);
     }
 
 
