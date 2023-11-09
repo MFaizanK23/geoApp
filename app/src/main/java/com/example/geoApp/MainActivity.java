@@ -31,9 +31,7 @@ public class MainActivity extends AppCompatActivity implements Adapter.OnNoteDel
     SearchView searchView;
     int longitude, latitude;
     String address;
-
-
-
+    
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
